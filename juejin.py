@@ -49,7 +49,7 @@ def add_item(post):
 
 def main(wf):
     # 缓存 1 分钟
-    posts = wf.cached_data('posts', load_rencent_posts, max_age=60*60)
+    posts = wf.cached_data('posts', load_rencent_posts, max_age=60)
 
     for post in posts:
         add_item(post)
